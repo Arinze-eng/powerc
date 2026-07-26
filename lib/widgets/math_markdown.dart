@@ -97,12 +97,6 @@ class MathMarkdown extends StatelessWidget {
     final tex = KaTeX(
       s.text,
       textStyle: TextStyle(color: mathColor, fontSize: fontSize),
-      mathStyle: s.display ? MathStyle.display : MathStyle.text,
-      // Never throw — fall back to the raw LaTeX as plain text.
-      onErrorFallback: (err) => Text(
-        s.display ? '\$\$${s.text}\$\$' : '\$${s.text}\$',
-        style: TextStyle(color: mathColor, fontSize: fontSize),
-      ),
     );
     if (s.display) {
       return Padding(
@@ -113,6 +107,8 @@ class MathMarkdown extends StatelessWidget {
         ),
       );
     }
+    return tex;
+  }
     return tex;
   }
 
