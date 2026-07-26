@@ -11,7 +11,7 @@
 // LaTeX falls back to showing the raw source text instead of throwing.
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import "package:flutter_math_fork/flutter_math.dart";
+import "package:katex_flutter/katex_flutter.dart";
 
 class _Segment {
   final String text;
@@ -94,7 +94,7 @@ class MathMarkdown extends StatelessWidget {
   }
 
   Widget _mathWidget(_Segment s) {
-    final tex = Math.tex(
+    final tex = KaTeX(
       s.text,
       textStyle: TextStyle(color: mathColor, fontSize: fontSize),
       mathStyle: s.display ? MathStyle.display : MathStyle.text,
