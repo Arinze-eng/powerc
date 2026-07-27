@@ -109,8 +109,6 @@ class MathMarkdown extends StatelessWidget {
     }
     return tex;
   }
-    return tex;
-  }
 
   @override
   Widget build(BuildContext context) {
