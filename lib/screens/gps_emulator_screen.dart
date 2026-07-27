@@ -305,7 +305,7 @@ class _GpsEmulatorScreenState extends State<GpsEmulatorScreen> {
                       padding:
                           const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
-                        color: AppTheme.accent.withValues(alpha: 0.18),
+                        color: AppTheme.accent.withAlpha(46),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Text('LIVE',
@@ -510,7 +510,7 @@ class _GpsEmulatorScreenState extends State<GpsEmulatorScreen> {
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: (_verifyOk ? AppTheme.accent : AppTheme.muted)
-                      .withValues(alpha: 0.14),
+                      .withAlpha(36),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                       color: _verifyOk ? AppTheme.accent : AppTheme.surfaceAlt),
